@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #f4ecd8; /* Retro Cream */
+    color: #3b2f2f;           /* Dark Brown */
+    line-height: 1.6;
+    padding-bottom: 160px;     /* Space for fixed footer */
+}
+
+a {
+    color: #3b2f2f;           /* Dark Brown */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #ff6b35;           /* Retro Orange Accent */
+}
+
+/* Nav Bar / Top Panel */
+.nav-bar {
+    background-color: #355c7d; /* Vintage Blue */
+    border-bottom: 2px solid #c97b63; /* Vintage Orange */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Nav Bar Text Options override default text main */
+.nav-bar a {
+    color: #f4ecd8;            /* Retro Cream for contrast against blue */
+}
+
+.nav-bar a:hover {
+    color: #ff6b35;            /* Retro Orange */
+}
+
+.name h4 {
+    font-weight: bold;
+    color: #ff6b35;            /* Retro Orange Accent */
+}
+
+.name a {
+    font-weight: bold;
+    color: #f4ecd8; 
+}
+
+.menu a {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.menu a u {
+    text-decoration-color: #ff6b35;
+}
+
+.breadcrumbs {
+    color: #f4ecd8;            /* Retro Cream */
+    font-size: 14px;
+    background: #3b2f2f;       /* Dark Brown Terminal Box */
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #c97b63;
+}
+
+/* Main OS Window Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.window {
+    background-color: #fff7e6; /* Warm Paper */
+    border: 2px solid #c97b63; /* Vintage Orange */
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(59, 47, 47, 0.15);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.window-header {
+    background: #c97b63;       /* Vintage Orange Header */
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exe {
+    color: #fff7e6;            /* Warm Paper Text on Header */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.page {
+    padding: 30px;
+}
+
+/* Hero Page Layout */
+.hero-layout {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lside {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hi {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.hi em {
+    color: #ff6b35;            /* Retro Orange */
+    font-style: normal;
+    border-bottom: 2px dashed #ff6b35;
+}
+
+.role {
+    font-size: 19px;
+    color: #7b5e57;            /* Muted Brown */
+}
+
+.quote {
+    margin-top: 20px;
+    color: #ff6b35;            /* Retro Orange */
+    opacity: 0.9;
+}
+
+.picture {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #c97b63;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f4ecd8;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* About Page Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+h3 {
+    color: #ff6b35;            /* Retro Orange */
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #c97b63;
+    padding-bottom: 4px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #3b2f2f;            /* Dark Brown */
+}
+
+ul li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #ff6b35;            /* Retro Orange */
+}
+
+/* Projects Page Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #f4ecd8;       /* Retro Cream */
+    border: 1px solid #c97b63; /* Vintage Orange */
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    border-color: #ff6b35;    /* Retro Orange */
+}
+
+.project-card h3 {
+    border: none;
+    margin-bottom: 15px;
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 120px;
+    background: #fff7e6;       /* Warm Paper */
+    border: 1px dashed #c97b63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7b5e57;            /* Muted Brown */
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+/* Contact Page Form Elements */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #ff6b35;            /* Retro Orange */
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    background-color: #fff7e6; /* Warm Paper */
+    border: 1px solid #c97b63; /* Vintage Orange */
+    color: #3b2f2f;            /* Dark Brown */
+    padding: 10px;
+    font-family: inherit;
+    border-radius: 4px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #ff6b35;    /* Retro Orange */
+}
+
+.send-btn {
+    background-color: transparent;
+    border: 2px solid #ff6b35; /* Retro Orange */
+    color: #ff6b35;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+
+.send-btn:hover {
+    background-color: #ff6b35;
+    color: #fff7e6;
+}
+
+/* Footer & Desktop Shortcuts Panel */
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #355c7d;       /* Vintage Blue */
+    border-top: 2px solid #c97b63; /* Vintage Orange */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 10px 0;
+    z-index: 100;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 12px;
+}
+
+.footer-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #f4ecd8;            /* Retro Cream text for footer */
+}
+
+.footer-icons a:hover {
+    color: #ff6b35;            /* Retro Orange */
+}
+
+.footer-icons img {
+    margin-bottom: 4px;
+    transition: transform 0.2s;
+}
+
+.footer-icons a:hover img {
+    transform: scale(1.05);
+}
+
+.copyright {
+    font-size: 12px;
+    color: #f4ecd8;            /* Retro Cream */
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    border-top: 1px dashed #c97b63;
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .breadcrumbs {
+        display: none;
+    }
+    .hero-layout {
+        text-align: center;
+        justify-content: center;
+    }
+}
