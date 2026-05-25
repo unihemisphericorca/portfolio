@@ -3,18 +3,19 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; /* Bolds absolutely everything across all pages */
 }
 
 body {
     background-color: #f4ecd8; /* Retro Cream */
-    color: #3b2f2f;           /* Dark Brown */
+    color: #1a1111;           /* Darkened for maximum readability */
     line-height: 1.6;
-    padding-bottom: 160px;     /* Space for fixed footer */
+    padding-bottom: 250px;     /* Massive buffer zone lets you scroll content completely past the footer */
 }
 
 a {
-    color: #3b2f2f;           /* Dark Brown */
-    text-decoration: none;
+    color: #1a1111;           
+    text-decoration: underline; /* Clear distinction for clickable links */
     transition: color 0.2s ease;
 }
 
@@ -25,7 +26,7 @@ a:hover {
 /* Nav Bar / Top Panel */
 .nav-bar {
     background-color: #355c7d; /* Vintage Blue */
-    border-bottom: 2px solid #c97b63; /* Vintage Orange */
+    border-bottom: 3px solid #c97b63; /* Thickened Vintage Orange Border */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,23 +36,22 @@ a:hover {
     z-index: 100;
 }
 
-/* Nav Bar Text Options override default text main */
+/* Nav Bar Links */
 .nav-bar a {
-    color: #f4ecd8;            /* Retro Cream for contrast against blue */
+    color: #fff7e6;            /* High contrast text on blue */
+    text-decoration: none;     
 }
 
 .nav-bar a:hover {
-    color: #ff6b35;            /* Retro Orange */
+    color: #ff6b35;            
 }
 
 .name h4 {
-    font-weight: bold;
-    color: #ff6b35;            /* Retro Orange Accent */
+    color: #ff6b35;            
 }
 
 .name a {
-    font-weight: bold;
-    color: #f4ecd8; 
+    color: #fff7e6; 
 }
 
 .menu a {
@@ -61,45 +61,47 @@ a:hover {
 
 .menu a u {
     text-decoration-color: #ff6b35;
+    text-decoration-thickness: 2px;
 }
 
 .breadcrumbs {
-    color: #f4ecd8;            /* Retro Cream */
+    color: #fff7e6;            
     font-size: 14px;
-    background: #3b2f2f;       /* Dark Brown Terminal Box */
-    padding: 2px 8px;
+    background: #1a1111;       /* Solid Black/Brown Terminal Box */
+    padding: 4px 10px;
     border-radius: 4px;
-    border: 1px solid #c97b63;
+    border: 2px solid #c97b63;
 }
 
 /* Main OS Window Container */
 .container {
     max-width: 900px;
-    margin: 40px auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;      /* Huge bottom push away from the footer boundary */
     padding: 0 20px;
 }
 
 .window {
     background-color: #fff7e6; /* Warm Paper */
-    border: 2px solid #c97b63; /* Vintage Orange */
+    border: 3px solid #c97b63; 
     border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(59, 47, 47, 0.15);
-    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(26, 17, 17, 0.3);
     overflow: hidden;
 }
 
 .window-header {
     background: #c97b63;       /* Vintage Orange Header */
-    padding: 6px 12px;
+    padding: 8px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .exe {
-    color: #fff7e6;            /* Warm Paper Text on Header */
-    font-size: 14px;
-    font-weight: bold;
+    color: #fff7e6;            
+    font-size: 15px;
     letter-spacing: 1px;
 }
 
@@ -123,29 +125,29 @@ a:hover {
 .hi {
     font-size: 32px;
     margin-bottom: 5px;
+    color: #1a1111;
 }
 
 .hi em {
-    color: #ff6b35;            /* Retro Orange */
+    color: #ff6b35;            
     font-style: normal;
-    border-bottom: 2px dashed #ff6b35;
+    border-bottom: 3px solid #ff6b35; 
 }
 
 .role {
-    font-size: 19px;
-    color: #7b5e57;            /* Muted Brown */
+    font-size: 20px;
+    color: #523a35;            
 }
 
 .quote {
     margin-top: 20px;
-    color: #ff6b35;            /* Retro Orange */
-    opacity: 0.9;
+    color: #d64b18;            
 }
 
 .picture {
     width: 180px;
     height: 180px;
-    border: 2px solid #c97b63;
+    border: 3px solid #c97b63;
     border-radius: 4px;
     overflow: hidden;
     background: #f4ecd8;
@@ -157,7 +159,7 @@ a:hover {
     object-fit: cover;
 }
 
-/* About Page Layout */
+/* About & Shifted Technical Panels Layout */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -165,10 +167,10 @@ a:hover {
 }
 
 h3 {
-    color: #ff6b35;            /* Retro Orange */
-    font-size: 18px;
+    color: #d64b18;            
+    font-size: 19px;
     margin-bottom: 12px;
-    border-bottom: 1px dashed #c97b63;
+    border-bottom: 2px solid #c97b63; 
     padding-bottom: 4px;
 }
 
@@ -178,17 +180,17 @@ ul {
 
 ul li {
     position: relative;
-    padding-left: 15px;
-    margin-bottom: 6px;
-    font-size: 14px;
-    color: #3b2f2f;            /* Dark Brown */
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #1a1111;            
 }
 
 ul li::before {
     content: ">";
     position: absolute;
     left: 0;
-    color: #ff6b35;            /* Retro Orange */
+    color: #ff6b35;            
 }
 
 /* Projects Page Layout */
@@ -199,8 +201,8 @@ ul li::before {
 }
 
 .project-card {
-    background: #f4ecd8;       /* Retro Cream */
-    border: 1px solid #c97b63; /* Vintage Orange */
+    background: #f4ecd8;       
+    border: 2px solid #c97b63; 
     border-radius: 4px;
     padding: 15px;
     text-align: center;
@@ -209,7 +211,7 @@ ul li::before {
 
 .project-card:hover {
     transform: translateY(-2px);
-    border-color: #ff6b35;    /* Retro Orange */
+    border-color: #ff6b35;    
 }
 
 .project-card h3 {
@@ -220,13 +222,13 @@ ul li::before {
 .project-placeholder {
     width: 100%;
     height: 120px;
-    background: #fff7e6;       /* Warm Paper */
-    border: 1px dashed #c97b63;
+    background: #fff7e6;       
+    border: 2px dashed #c97b63;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7b5e57;            /* Muted Brown */
-    font-size: 13px;
+    color: #523a35;            
+    font-size: 14px;
     border-radius: 4px;
 }
 
@@ -246,32 +248,31 @@ ul li::before {
 }
 
 .form-group label {
-    font-size: 14px;
-    color: #ff6b35;            /* Retro Orange */
-    font-weight: bold;
+    font-size: 15px;
+    color: #d64b18;            
 }
 
 .form-group input, .form-group textarea {
-    background-color: #fff7e6; /* Warm Paper */
-    border: 1px solid #c97b63; /* Vintage Orange */
-    color: #3b2f2f;            /* Dark Brown */
+    background-color: #fff7e6; 
+    border: 2px solid #c97b63; 
+    color: #1a1111;            
     padding: 10px;
     font-family: inherit;
+    font-weight: bold;
     border-radius: 4px;
 }
 
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #ff6b35;    /* Retro Orange */
+    border-color: #ff6b35;    
 }
 
 .send-btn {
     background-color: transparent;
-    border: 2px solid #ff6b35; /* Retro Orange */
-    color: #ff6b35;
+    border: 3px solid #ff6b35; 
+    color: #d64b18;
     padding: 10px 20px;
     font-family: inherit;
-    font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.2s, color 0.2s;
@@ -290,7 +291,7 @@ ul li::before {
     left: 0;
     right: 0;
     background: #355c7d;       /* Vintage Blue */
-    border-top: 2px solid #c97b63; /* Vintage Orange */
+    border-top: 3px solid #c97b63; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,12 +310,13 @@ ul li::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 12px;
-    color: #f4ecd8;            /* Retro Cream text for footer */
+    font-size: 13px;
+    color: #fff7e6;            
+    text-decoration: none;     
 }
 
 .footer-icons a:hover {
-    color: #ff6b35;            /* Retro Orange */
+    color: #ff6b35;            
 }
 
 .footer-icons img {
@@ -327,11 +329,10 @@ ul li::before {
 }
 
 .copyright {
-    font-size: 12px;
-    color: #f4ecd8;            /* Retro Cream */
-    opacity: 0.8;
+    font-size: 13px;
+    color: #fff7e6;            
     letter-spacing: 0.5px;
-    border-top: 1px dashed #c97b63;
+    border-top: 2px solid #c97b63; 
     width: 100%;
     text-align: center;
     padding-top: 8px;
@@ -344,7 +345,8 @@ ul li::before {
         text-align: center;
     }
     .breadcrumbs {
-        display: none;
+        flex-direction: column;
+        text-align: center;
     }
     .hero-layout {
         text-align: center;
