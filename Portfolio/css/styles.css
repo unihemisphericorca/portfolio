@@ -204,8 +204,8 @@ body {
 
 
 .profile-swap-container {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin: 30px auto;
     position: relative;
 }
@@ -309,8 +309,8 @@ ul li::before {
 }
 
 .certs-icon {
-    width: 75%;   /* Increased size */
-    height: 75%;  /* Increased size */
+    width: 75%;   
+    height: 75%;  
 }
 
 .certs-text {
